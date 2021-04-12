@@ -1,5 +1,7 @@
 #include <iostream>
+extern "C" {
 #include "mongoose.h"
+}
 
 static void fn(struct mg_connection* c, int ev, void* ev_data, void* fn_data) {
     if (ev == MG_EV_HTTP_MSG) {
